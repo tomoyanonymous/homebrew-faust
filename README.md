@@ -18,15 +18,14 @@ brew install faust [option]
 
 Faust has 2 major version, faust0 and faust2. In this formula, normally faust2 will be installed.
 Only faust2 depends on **llvm** and **openssl**.
-HEAD version is compatible for latest llvm, so I'll fix in next release of faust.
 
 - --with-faust0
 
-install faust0. Dependency is only pkg-config.
+Install faust0. Dependency is only pkg-config.
 
 - --HEAD
 
-install head version of faust [git repository](https://github.com/grame-cncm/faust).
+Install head version of faust [git repository](https://github.com/grame-cncm/faust).
 Normally head of **faust2 branch** will be installed.
 if --with-faust0 option is also taken, head of **master branch** willbe installed.
 
