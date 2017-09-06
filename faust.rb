@@ -11,7 +11,7 @@ class Faust < Formula
   option "without-sound2faust", "don't compile sound to DSP file converter"
   option "without-test", "don't install test suite"
   depends_on "pkg-config" => :run
-  depends_on "llvm@3.8" => :run
+  depends_on "llvm" => :run
   depends_on "openssl" => :run
   if build.with? "httpd"
     depends_on "libmicrohttpd" =>:run
@@ -21,6 +21,9 @@ class Faust < Formula
   end
 
   def install
+    if !build.head?
+      inreplace "compiler/Makefile.unix", "$(filter $(LLVM_VERSION), 4.0.0)", "$(filter $(LLVM_VERSION), 4.0.0 4.0.1)"
+    end
     system "make"
     if build.with? "httpd"
       system "make", "httpd"
