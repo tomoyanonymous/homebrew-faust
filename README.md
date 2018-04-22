@@ -18,13 +18,13 @@ brew install faust [option]
 
 ### Option
 
-This normally installs with
+This normally installs with llvm backend(libfaust).
 
-`make all`,`make httpd`,`make sound2faust`,`make dynamic`
+`make all`
 
 #### --with-universal
 
-This use `make universal` instead of `make all` to make universal binary.
+This use `make universal`
 
 #### --with-web
 
@@ -38,9 +38,7 @@ This option installs asmjs compiler and wasm compiler after above(depends on ems
 #### --with-ios
 
 - make ios
-- make ios-llvm
 
-*Currently `-I../architechture` in `CXXFLAGS` of tasks; asmjs, wasm, ios and ios-llvm are seems to be missing.*
 
 - --HEAD
 
@@ -48,6 +46,7 @@ Install **master-dev** branch of faust [git repository](https://github.com/grame
 .
 ### Dependencies
 
+- cmake
 - llvm
 - openssl
 - libmicrohttpd

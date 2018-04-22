@@ -18,11 +18,11 @@ brew install faust [option]
 
 何も指定しないと、
 
-`make all`,`make httpd`,`make sound2faust`,`make dynamic` をインストールします。
+`make all`でインストールします。llvmバックエンドのlibfaustもインストールします。
 
 #### --with-universal
 
-`make all`の代わりに`make universal`を使い、コンパイラをユニバーサルバイナリで出力します。
+`make universal`を使い、コンパイラをユニバーサルバイナリで出力します。
 
 #### --with-web
 
@@ -38,9 +38,6 @@ brew install faust [option]
 標準のコンパイラに加えてiOS向けのコンパイラを出力します。
 
 - make ios
-- make ios-llvm
-
-*現在compiler/Makefile.unixのasmjs, wasm, ios ,ios-llvmタスクの`CXXFLAGS`から `-I../architechture`が抜けているようで--with-webと--with-iosはそのままではビルドが通りません*
 
 - --HEAD
 
@@ -48,6 +45,7 @@ brew install faust [option]
 .
 ### 依存パッケージ
 
+- cmake
 - llvm
 - openssl
 - libmicrohttpd
