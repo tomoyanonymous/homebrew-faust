@@ -6,7 +6,7 @@ class Faust < Formula
   head "https://github.com/grame-cncm/faust.git", :branch => "master-dev"
 
   option "with-web", "install with asmjs and wasm compiler(need emscripten)."
-  option "with-ios", "install with ios libraly(only in head)"
+  option "with-ios", "install with ios library(only in head)"
   option "with-universal", "create universal binary(only in head)"
 
   depends_on "cmake" => :build
@@ -31,6 +31,7 @@ class Faust < Formula
     if build.with? "ios"
       system "make", "ios"
     end
+    system "make", "install", "PREFIX=#{prefix}"
   end
   test do
     cp_r "#{prefix}/tests/architecture-tests", testpath
