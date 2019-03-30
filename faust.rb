@@ -1,8 +1,8 @@
 class Faust < Formula
   desc "Functional AUdio STream is language for signal processing and synthesis"
   homepage "http://faust.grame.fr"
-  url "https://github.com/grame-cncm/faust/releases/download/2.5.23/faust-2.5.23.tar.gz"
-  sha256 "d87ef98a7a25367c12f51fe1ebb07fe4f2c0b37f27b63b7bcd074273b295e5fb"
+  url "https://github.com/grame-cncm/faust/archive/2.15.10.tar.gz"
+  sha256 "0c8aa41fbbb51569bd1f15ea4556d96b97894b0f2107959dddcb8d68512443f6"
   head "https://github.com/grame-cncm/faust.git", :branch => "master-dev"
 
   option "with-web", "install with asmjs and wasm compiler(need emscripten)."
