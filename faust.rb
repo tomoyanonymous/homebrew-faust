@@ -8,15 +8,14 @@ class Faust < Formula
   option "with-web", "install with  wasm compiler(need emscripten)."
   option "with-ios", "install with ios library"
   option "with-universal", "create universal binary"
-
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
-  depends_on "llvm"
   depends_on "libmicrohttpd"
   depends_on "libsndfile"
   if build.with? "web"
     depends_on "emscripten" => :build
   end
+  depends_on "llvm"
   depends_on "openssl"
   def install
     if build.with? "universal"
