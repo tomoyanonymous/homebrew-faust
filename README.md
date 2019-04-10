@@ -28,11 +28,10 @@ This use `make universal`
 
 #### --with-web
 
-This option installs asmjs compiler and wasm compiler after above(depends on emscripten)
+This option installs wasm compiler after above(depends on emscripten)
 
 *Emscripten needs to set environment variable LLVM_PATH manually, Please follow the instruction in an installation.*
 
-- make asmjs
 - make wasm
 
 #### --with-ios

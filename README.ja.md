@@ -26,11 +26,10 @@ brew install faust [option]
 
 #### --with-web
 
-標準のコンパイラに加えてasm.jsとwebassemblyコンパイラを出力します。emscriptenが依存パッケージになります。
+標準のコンパイラに加えてwebassemblyコンパイラを出力します。emscriptenが依存パッケージになります。
 
 *Emscriptenは環境変数LLVM_PATHを手動でセットする必要があります。Homebrewのインストール時のメッセージに従って設定して下さい。*
 
-- make asmjs
 - make wasm
 
 #### --with-ios

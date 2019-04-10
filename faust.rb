@@ -1,13 +1,13 @@
 class Faust < Formula
   desc "Functional AUdio STream is language for signal processing and synthesis"
   homepage "http://faust.grame.fr"
-  url "https://github.com/grame-cncm/faust/archive/2.15.10.tar.gz"
-  sha256 "0c8aa41fbbb51569bd1f15ea4556d96b97894b0f2107959dddcb8d68512443f6"
+  url "https://github.com/grame-cncm/faust/archive/2.15.11.tar.gz"
+  sha256 "910c65a851fdbf1a289dea8df204d48e2065a137"
   head "https://github.com/grame-cncm/faust.git", :branch => "master-dev"
 
-  option "with-web", "install with asmjs and wasm compiler(need emscripten)."
-  option "with-ios", "install with ios library(only in head)"
-  option "with-universal", "create universal binary(only in head)"
+  option "with-web", "install with  wasm compiler(need emscripten)."
+  option "with-ios", "install with ios library"
+  option "with-universal", "create universal binary"
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
@@ -26,7 +26,6 @@ class Faust < Formula
     system "make", "all"
     if build.with? "web"
       system "make", "wasm"
-      system "make", "asmjs"
     end
     if build.with? "ios"
       system "make", "ios"
