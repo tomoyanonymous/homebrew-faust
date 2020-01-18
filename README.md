@@ -18,28 +18,15 @@ brew install faust [option]
 
 ### Option
 
-This normally installs with llvm backend(libfaust).
+This formula normally installs with llvm backend and libfaust(both of static and dynamic version).
 
 `make all`
 
 #### --with-universal
 
-This use `make universal`
+This makes universal binary.
 
-#### --with-web
-
-This option installs wasm compiler after above(depends on emscripten)
-
-*Emscripten needs to set environment variable LLVM_PATH manually, Please follow the instruction in an installation.*
-
-- make wasm
-
-#### --with-ios
-
-- make ios
-
-
-- --HEAD
+#### --HEAD
 
 Install **master-dev** branch of faust [git repository](https://github.com/grame-cncm/faust).
 .
@@ -51,7 +38,6 @@ Install **master-dev** branch of faust [git repository](https://github.com/grame
 - libmicrohttpd
 - libsndfile
 - pkg-config
-- (emscripten)
 
 ## other
 

@@ -1,6 +1,6 @@
 # Homebrew-formula Faust
 
-[faust](http://faust.grame.fr)をHomebrewでインストールするためのリポジトリです。.
+[faust](http://faust.grame.fr)をHomebrewでインストールするためのリポジトリです。
 
 ## インストール
 
@@ -24,21 +24,7 @@ brew install faust [option]
 
 `make universal`を使い、コンパイラをユニバーサルバイナリで出力します。
 
-#### --with-web
-
-標準のコンパイラに加えてwebassemblyコンパイラを出力します。emscriptenが依存パッケージになります。
-
-*Emscriptenは環境変数LLVM_PATHを手動でセットする必要があります。Homebrewのインストール時のメッセージに従って設定して下さい。*
-
-- make wasm
-
-#### --with-ios
-
-標準のコンパイラに加えてiOS向けのコンパイラを出力します。
-
-- make ios
-
-- --HEAD
+#### --HEAD
 
 [Gitリポジトリ](https://github.com/grame-cncm/faust)上の開発版、**master-dev**ブランチからビルドします。
 .
@@ -50,7 +36,6 @@ brew install faust [option]
 - libmicrohttpd
 - libsndfile
 - pkg-config
-- (emscripten)
 
 ## その他
 
