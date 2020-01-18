@@ -1,5 +1,7 @@
 # Homebrew-formula Faust
 
+*UPDATE(2020-01-19):現在は本家リポジトリに登録されているので`brew install faust`でインストールしてください。一応しばらくこのままにしておきます*
+
 [faust](http://faust.grame.fr)をHomebrewでインストールするためのリポジトリです。
 
 ## インストール

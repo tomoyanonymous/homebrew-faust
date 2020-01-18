@@ -1,5 +1,7 @@
 # Homebrew-formula Faust
 
+*UPDATE(2020-01-19): Faust is now available from homebrew-core repo. I recommend just use `brew install faust`(I will keep this repo for a while)*
+
 [日本語](./README.ja.md)
 
 This is the tap repository for homebrew [faust](http://faust.grame.fr).

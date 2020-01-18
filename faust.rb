@@ -11,6 +11,7 @@ class Faust < Formula
   depends_on "llvm" =>:build
   depends_on "openssl" => :build
   def install
+    opoo "Faust is now available from homebrew-core repo. Please just use `brew install faust`."
     if build.with? "universal"
       system "make", "universal"
     end
